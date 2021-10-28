@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="co.micol.mybatis.member.service.MemberMapper"> <!-- namespace에는 가지고 있는 Mapper 인터페이스 위치를 쓴다. -->
+
+	<!-- id를 쓸때는 부모인 인터페이스 Mapper가 가지고 있는 메소드명을 쓴다. -->
+	<select id="memberLogin" resultType="co.micol.mybatis.member.service.MemberVO">
+		select * from member where id = #{id} and password = #{password}
+	</select>
+		
+	<select id="memberSelectList" resultType="co.micol.mybatis.member.service.MemberVO">
+		select * from member 
+	</select>
+	
+	<select id="memberSelect" resultType="co.micol.mybatis.member.service.MemberVO">
+		select * from member where id = #{id} <!-- #{}안의 이름은 vo의 이름과 같아야함 -->
+		<if test="password != null"> <!-- 로그인 시 사용된다. -->
+			AND password = #{password}
+		</if>
+	</select>
+
+	<insert id="memberInsert" parameterType="co.micol.mybatis.member.service.MemberVO">
+		insert * from member values(#{id},#{password},#{name},#{address},#{tel},#{author})
+	</insert>
+	
+	<update id="memberUpdate" parameterType="co.micol.mybatis.member.service.MemberVO">
+		update member set password = #{password}, author = #{author} where id = #{id}
+	</update> <!-- id가 같을 때 password와 author만 수정할 수 있도록 가정한다. -->
+
+	<delete id="memberDelete" parameterType="co.micol.mybatis.member.service.MemberVO">
+		delete from member where id = #{id}
+	</delete>
+
+</mapper>

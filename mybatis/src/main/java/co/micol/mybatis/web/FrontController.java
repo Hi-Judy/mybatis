@@ -13,11 +13,19 @@ import javax.servlet.http.HttpServletResponse;
 
 import co.micol.mybatis.comm.Command;
 import co.micol.mybatis.command.HomeCommand;
+import co.micol.mybatis.command.MemberJoin;
+import co.micol.mybatis.command.MemberJoinForm;
 import co.micol.mybatis.command.MemberLogin;
 import co.micol.mybatis.command.MemberLoginForm;
+import co.micol.mybatis.command.MemberLogout;
 import co.micol.mybatis.command.MemberSelect;
 import co.micol.mybatis.command.MemberSelectList;
+import co.micol.mybatis.command.NoticeDelete;
+import co.micol.mybatis.command.NoticeForm;
+import co.micol.mybatis.command.NoticeInsert;
 import co.micol.mybatis.command.NoticeList;
+import co.micol.mybatis.command.NoticeSelect;
+import co.micol.mybatis.command.idCheckForm;
 
 @WebServlet("*.do")
 public class FrontController extends HttpServlet {
@@ -36,9 +44,17 @@ public class FrontController extends HttpServlet {
 		map.put("/home.do", new HomeCommand()); //Home, 처음 호출했을 때 보여주는 페이지
 		map.put("/memberSelectList.do", new MemberSelectList()); //멤버 목록 가져오기
 		map.put("/memberSelect.do", new MemberSelect()); //멤버 한명 가져오기
+		map.put("/memberLoginForm.do", new MemberLoginForm()); //로그인 폼 페이지
+		map.put("/memberLogin.do", new MemberLogin()); //로그인 처리하는 페이지
+		map.put("/memberLogout.do", new MemberLogout()); //로그아웃
+		map.put("/memberJoinForm.do", new MemberJoinForm()); //회원가입 폼 페이지
+		map.put("/memberJoin.do", new MemberJoin()); //회원가입 처리하는 페이지
+		map.put("/idCheckForm.do", new idCheckForm()); //아이디 중복체크 페이지
 		map.put("/noticeList.do", new NoticeList()); //게시글 목록 가져오기
-		map.put("/memberLoginForm.do", new MemberLoginForm()); //
-		map.put("/memberLogin.do", new MemberLogin());
+		map.put("/noticeSelect.do", new NoticeSelect()); //세부 내역 보기
+		map.put("/noticeForm.do", new NoticeForm()); //게시글 입력하기
+		map.put("/noticeInsert.do", new NoticeInsert()); //게시글 저장
+		map.put("/noticeDelete.do", new NoticeDelete()); //게시글 삭제
 	}
 
 	//실제 요청을 분석하고 수행할 명령command를 찾아 실행한다. 그 후 결과를 보여줄 페이지를 선택한다.

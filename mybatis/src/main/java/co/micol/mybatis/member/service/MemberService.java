@@ -14,4 +14,7 @@ public interface MemberService {
 	
 	//로그인 체크
 	MemberVO memberLogin(MemberVO vo);
+	
+	//로그인 중복 체크 -> 이미 있는 회원이면 회원가입 실패 페이지 리턴
+	int idDuplication(MemberVO vo);
 }

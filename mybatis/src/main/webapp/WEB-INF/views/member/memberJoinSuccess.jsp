@@ -4,12 +4,13 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>로그인 성공</title>
+<title>회원가입 성공</title>
 </head>
 <jsp:include page="../home/header.jsp"/>
 <body>
 	<div align="center">
-		<div><h1>${name }님 환영합니다.</h1></div>
+		<div><h1>${message }</h1></div>
+		<button type="button" onclick="location.href='memberLoginForm.do'">로그인</button>
 	</div>
 </body>
 </html>

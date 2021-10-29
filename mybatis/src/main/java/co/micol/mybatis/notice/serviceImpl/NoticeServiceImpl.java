@@ -19,8 +19,8 @@ public class NoticeServiceImpl implements NoticeService {
 	}
 
 	@Override
-	public NoticeVO noticeSelect() {
-		return map.noticeSelect();
+	public NoticeVO noticeSelect(NoticeVO vo) {
+		return map.noticeSelect(vo);
 	}
 
 	@Override
@@ -37,5 +37,6 @@ public class NoticeServiceImpl implements NoticeService {
 	public int noticeDelete(NoticeVO vo) {
 		return map.noticeDelete(vo);
 	}
+
 
 }

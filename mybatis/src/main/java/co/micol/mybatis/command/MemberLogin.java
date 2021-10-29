@@ -17,25 +17,23 @@ public class MemberLogin implements Command {
 		HttpSession session = request.getSession(); //세션 객체를 불러온다
 		MemberService memberDao = new MemberServiceImpl();
 		MemberVO vo = new MemberVO();
+		
 //		vo.setId(session.getAttribute("id")); //세션이 존재할 때 세션값을 가져온다.
 		vo.setId(request.getParameter("id")); //페이지에서 입력한 id값을 vo객체에 담는다.
 		vo.setPassword(request.getParameter("password"));
 		
 		vo = memberDao.memberLogin(vo);
-		System.out.println(vo);
-		String page = null;
+//		request.setAttribute("member", vo); //request 객체에 싣는다.
 		
-		if(vo.getId()!= null) {
+		if(vo != null) {
 			session.setAttribute("id", vo.getId()); //session에 값(id)을 담아놓는다. 
 			session.setAttribute("author", vo.getAuthor());
 			session.setAttribute("name", vo.getName());
-			page = "member/memberLoginSuccess";
-		}else {
-			System.out.println(vo.getName());
-			page = "member/memberLoginFail";
+			return "member/memberLoginSuccess";
+		} else {
+			return "member/memberLoginFail";
 		}
 		
-		return page;
 	}
 
 }

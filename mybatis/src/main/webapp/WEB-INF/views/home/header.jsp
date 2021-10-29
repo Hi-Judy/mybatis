@@ -19,16 +19,15 @@
 				<li><a class="active" href="home.do">Home</a></li>
 				<c:if test="${empty id }">
 					<li><a href="memberLoginForm.do">로그인</a></li>
-					<li><a href="#">회원가입</a></li>
+					<li><a href="memberJoinForm.do">회원가입</a></li>
 				</c:if>
 				<c:if test="${not empty id }">
-					<li><a href="#">공지사항</a></li>
+					<li><a href="noticeList.do">게시글 목록</a></li>
 					<li><a href="memberSelect.do">나의 정보</a></li>
-					<li><a href="noticeList.do">게시글 목록</a>
 					<c:if test="${author == 'ADMIN' }">
 						<li><a href="memberSelectList.do">멤버 목록</a></li>
 					</c:if>
-					<li><a href="#">로그아웃</a></li>
+					<li><a href="memberLogout.do">로그아웃</a></li>
 				</c:if>
 			</ul>
 		</div>

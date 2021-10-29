@@ -39,5 +39,10 @@ public class MemberServiceImpl implements MemberService {
 	public MemberVO memberLogin(MemberVO vo) {
 		return map.memberLogin(vo);
 	}
+
+	@Override
+	public int idDuplication(MemberVO vo) {
+		return map.idDuplication(vo);
+	}
 	
 }

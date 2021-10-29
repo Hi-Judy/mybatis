@@ -4,9 +4,12 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>멤버 한 명 보기</title>
+<title>게시글 등록 오류</title>
 </head>
+
 <body>
-${member.id } : ${member.name }
+	<div align = "center">
+		<div><h1>${message }</h1></div>
+	</div>
 </body>
 </html>

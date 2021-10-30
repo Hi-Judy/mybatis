@@ -25,6 +25,7 @@ import co.micol.mybatis.command.NoticeForm;
 import co.micol.mybatis.command.NoticeInsert;
 import co.micol.mybatis.command.NoticeList;
 import co.micol.mybatis.command.NoticeSelect;
+import co.micol.mybatis.command.NoticeUpdate;
 import co.micol.mybatis.command.idCheckForm;
 
 @WebServlet("*.do")
@@ -55,6 +56,7 @@ public class FrontController extends HttpServlet {
 		map.put("/noticeForm.do", new NoticeForm()); //게시글 입력하기
 		map.put("/noticeInsert.do", new NoticeInsert()); //게시글 저장
 		map.put("/noticeDelete.do", new NoticeDelete()); //게시글 삭제
+		map.put("/noticeUpdate.do", new NoticeUpdate()); //게시글 수정
 	}
 
 	//실제 요청을 분석하고 수행할 명령command를 찾아 실행한다. 그 후 결과를 보여줄 페이지를 선택한다.

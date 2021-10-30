@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>게시글 작성</title>
-<!-- 공지사항 작성 -> db에 insert되어 추가 -> 추가된 것이 selectList에 업로드 -->
+<!-- 게시글 작성 → db에 insert되어 추가 → 추가된 것이 selectList에 업로드 -->
 <jsp:include page="../home/header.jsp"/>
 </head>
 <body>

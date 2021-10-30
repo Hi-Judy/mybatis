@@ -16,7 +16,7 @@
 	</insert>
 
 	<update id="noticeUpdate" parameterType="co.micol.mybatis.notice.service.NoticeVO">
-		update notice set title = #{title}, contents = #{contents}
+		update notice set title = #{title}, contents = #{contents}, writeDate = #{writeDate} where nId = #{nId}
 	</update>
 
 	<delete id="noticeDelete" parameterType="co.micol.mybatis.notice.service.NoticeVO">

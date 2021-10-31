@@ -8,7 +8,7 @@
 <script type="text/javascript">
 	function noticeEdit(str){
 		if(str == 'E'){
-			frm.action = "noticeUpdate.do";
+			frm.action = "noticeUpdateForm.do";
 		}else{
 			frm.action = "noticeDelete.do"
 		}

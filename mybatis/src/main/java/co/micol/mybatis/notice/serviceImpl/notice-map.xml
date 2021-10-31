@@ -18,6 +18,10 @@
 	<update id="noticeUpdate" parameterType="co.micol.mybatis.notice.service.NoticeVO">
 		update notice set title = #{title}, contents = #{contents}, writeDate = #{writeDate} where nId = #{nId}
 	</update>
+	
+	<update id="noticeHitUpdate" parameterType="co.micol.mybatis.notice.service.NoticeVO">
+		update notice set hit = hit+1 where nId=#{nId}
+	</update>
 
 	<delete id="noticeDelete" parameterType="co.micol.mybatis.notice.service.NoticeVO">
 		delete from notice where nId = #{nId}

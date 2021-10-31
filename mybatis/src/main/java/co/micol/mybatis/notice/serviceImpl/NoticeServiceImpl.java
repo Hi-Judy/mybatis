@@ -29,7 +29,7 @@ public class NoticeServiceImpl implements NoticeService {
 	}
 
 	@Override
-	public int noticeUpdate(NoticeVO vo) {
+	public  int noticeUpdate(NoticeVO vo) {
 		return map.noticeUpdate(vo);
 	}
 
@@ -37,6 +37,12 @@ public class NoticeServiceImpl implements NoticeService {
 	public int noticeDelete(NoticeVO vo) {
 		return map.noticeDelete(vo);
 	}
+
+	@Override
+	public int noticeHitUpdate(NoticeVO vo) {
+		return map.noticeHitUpdate(vo);
+	}
+
 
 
 }

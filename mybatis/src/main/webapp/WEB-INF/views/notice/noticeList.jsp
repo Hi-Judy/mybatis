@@ -11,6 +11,7 @@
 	function CallNotice(n){
 		frm.nid.value = n;
 		frm.submit();
+		
 	}
 </script>
 </head>

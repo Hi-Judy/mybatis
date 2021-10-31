@@ -5,6 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>게시글 상세 페이지</title>
+<link rel="stylesheet" href="css/notice.css">
 <script type="text/javascript">
 	function noticeEdit(str){
 		if(str == 'E'){
@@ -38,9 +39,7 @@
 				</tr>
 				<tr>
 					<th>내용</th>
-					<td colspan="10">
-						<textarea rows="10" cols="100">${notice.contents }</textarea>
-					</td>
+					<td class="noticeSelectTd" colspan="10" height=300px>${notice.contents }	</td>
 				</tr>
 			</table>
 		</div><br>

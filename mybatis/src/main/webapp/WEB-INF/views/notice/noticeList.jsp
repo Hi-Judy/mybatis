@@ -6,6 +6,7 @@
 <head>
 <meta charset="UTF-8">
 <title>게시글 목록</title>
+<link rel="stylesheet" href="css/notice.css">
 <jsp:include page="../home/header.jsp"/>
 <script type="text/javascript">
 	function CallNotice(n){

@@ -5,6 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>게시글 수정 페이지</title>
+<link rel="stylesheet" href="css/notice.css">
 <!-- 게시글 수정 → db에 update되어 변경 → 변경된 것이 selectList에 업로드 -->
 <jsp:include page="../home/header.jsp"/>
 </head>
@@ -17,16 +18,16 @@
 				<tr>
 					<th width="100">순번</th>
 					<td width="100" align="center">
-						<input type="text" id="nid" name="nid" value="${notice.nId }"></td>
+						<input type="text" id="nid" name="nid" value="${notice.nId }" readonly="readonly"></td>
 					<th width="200">작성자</th>
 					<td width="200" align="center">
-						<input type="text" id="id" name="id" value="${notice.name }"></td>
+						<input type="text" id="id" name="id" value="${notice.name }" readonly="readonly"></td>
 					<th width="200">작성일</th>
 					<td width="200" align="center">
-						<input type="text" id="writeDate" name="writeDate" value="${notice.writeDate }"></td>
+						<input type="text" id="writeDate" name="writeDate" value="${notice.writeDate }" readonly="readonly"></td>
 					<th width="100">조회수</th>
 					<td width="100" align="center">
-						<input type="text" id="hit" name="hit" value="${notice.hit }"></td>
+						<input type="text" id="hit" name="hit" value="${notice.hit }" readonly="readonly"></td>
 				</tr>
 				<tr>
 					<th>제목</th>

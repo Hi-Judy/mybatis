@@ -24,7 +24,7 @@
 				<c:if test="${not empty id }">
 					<li><a href="noticeList.do">게시글 목록</a></li>
 					<li><a href="memberSelect.do">나의 정보</a></li>
-					<c:if test="${author == 'ADMIN' }">
+					<c:if test="${author == 'admin' }">
 						<li><a href="memberSelectList.do">멤버 목록</a></li>
 					</c:if>
 					<li><a href="memberLogout.do">로그아웃</a></li>
